@@ -16,6 +16,12 @@
 }
 
 .mat-table {
+  overflow: scroll;
+  max-height: 500px;
+  width: 100%;
+}
+.table-container {
   overflow: auto;
   max-height: 500px;
+  width: 100%;
 }
