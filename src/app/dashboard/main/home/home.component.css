@@ -1,0 +1,15 @@
+.home-card-one {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1vh 2vw;
+}
+app-card {
+  margin: 1vh 1vw;
+}
+.chart-card-two {
+  margin: 2vh 0 0 1vw;
+  display: grid;
+  grid-template-columns: 55vw;
+  grid-auto-rows: 1000px;
+}

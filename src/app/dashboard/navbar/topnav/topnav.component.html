@@ -1,0 +1,31 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon color="primary">menu</mat-icon>
+  </button>
+
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon color="primary">crop_free</mat-icon>
+  </button>
+  <button mat-icon-button color="accent">
+    <mat-icon color="primary" [matBadge]="leng" matBadgeColor="warn"
+      >notifications</mat-icon
+    >
+  </button>
+  <img src="../../../../assets/pic.jpg" alt="imag" />
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon color="primary">settings</mat-icon>
+  </button>
+</mat-toolbar>

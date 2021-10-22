@@ -1,0 +1,21 @@
+.image-card-style {
+  width: 40px;
+  height: 40px;
+}
+.example-card {
+  width: 300px;
+}
+.card-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-home-image {
+  margin-left: 10px;
+}
+.details-card-style {
+  margin-right: 10px;
+}
+.blank-card-div {
+  flex: 1;
+}

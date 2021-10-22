@@ -1,0 +1,6 @@
+.chart-card-two {
+  margin: 2vh 0 0 1vw;
+  display: grid;
+  grid-template-columns: 45vw 25vw;
+  grid-gap: 2vw;
+}

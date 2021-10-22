@@ -1,0 +1,116 @@
+<div class="mat-title"><strong>Add Users</strong></div>
+<div class="register-form-container">
+  <mat-card class="example-card mat-elevation-z8">
+    <mat-card-title> Add a New User </mat-card-title>
+    <form (ngSubmit)="onSubmit()" ngForm #f="ngForm">
+      <mat-card-content>
+        <br />
+
+        <mat-grid-list cols="2" rowHeight="10vh" gutterSize="2vh">
+          <mat-grid-tile>
+            <mat-form-field floatLabel="never" appearance="fill">
+              <mat-label>firstName</mat-label>
+              <input matInput required ngModel name="firstName" />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field floatLabel="never" appearance="fill">
+              <mat-label>lastName</mat-label>
+              <input matInput ngModel name="lastName" />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <mat-label>gender</mat-label>
+              <mat-select ngModel name="gender" required>
+                <mat-option>Select Value from Given</mat-option>
+                <mat-option value="male">male</mat-option>
+                <mat-option value="female">female</mat-option>
+                <mat-option value="other">other</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field floatLabel="never" appearance="fill">
+              <mat-label>mobile</mat-label>
+              <input matInput required ngModel name="mobile" />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field floatLabel="never" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput required ngModel name="password" />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field floatLabel="never" appearance="fill">
+              <mat-label>Reenter the password</mat-label>
+              <input matInput required ngModel name="confirmPassword" />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <mat-label>designation</mat-label>
+              <mat-select ngModel name="designation">
+                <mat-option>Select Value from Given</mat-option>
+                <mat-option value="juniordeveloper"
+                  >junior developer</mat-option
+                >
+                <mat-option value="ceo">ceo</mat-option>
+                <mat-option value="coo">coo</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <mat-label>department</mat-label>
+              <mat-select ngModel name="department">
+                <mat-option>Select Value from Given</mat-option>
+                <mat-option value="it">it</mat-option>
+                <mat-option value="management">management</mat-option>
+                <mat-option value="sales">sales</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field floatLabel="never" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput required ngModel name="email" />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <mat-label>data of joining</mat-label>
+              <input
+                matInput
+                [matDatepicker]="mydatepicker"
+                [min]="minDate"
+                ngModel
+                name="dateOfJoining"
+              />
+              <mat-datepicker-toggle matSuffix [for]="mydatepicker">
+                <mat-datepicker #mydatepicker> </mat-datepicker>
+              </mat-datepicker-toggle>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="2">
+            <mat-form-field appearance="fill">
+              <mat-label>Textarea</mat-label>
+              <textarea matInput ngModel name="address"></textarea>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="2">
+            <mat-form-field appearance="fill">
+              <mat-label>Upload Image</mat-label>
+              <input matInput ngModel name="profilePic" />
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+
+      <button mat-raised-button color="accent">Cancel</button>
+    </form>
+  </mat-card>
+</div>

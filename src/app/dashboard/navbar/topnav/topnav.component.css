@@ -1,0 +1,17 @@
+.example-spacer {
+  flex: 1;
+}
+mat-toolbar {
+  background-color: rgb(255, 255, 255) !important;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+  height: 10vh;
+}
+img {
+  height: 4vh;
+  width: 2vw;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto 0.3vw;
+}
