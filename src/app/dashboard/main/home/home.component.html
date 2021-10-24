@@ -1,10 +1,29 @@
 <br />
-<div class="home-card-one">
-  <app-card></app-card>
-  <br />
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+<div class="banner-home">
+  <div class="Right-banner-home">
+    <h3 class="right-home-text">Hi ! Welcome Back</h3>
+  </div>
+  <div class="gap-banner-home"></div>
+  <div class="left-banner-home">
+    <div class="left-banner-home-1">
+      <h3 class="top-line-left-banner-home">Customer Ratings</h3>
+      <p class="middle-line-left-banner-home">* * * * * <span>(5678)</span></p>
+    </div>
+    <div class="left-banner-home-2">
+      <h3 class="top-line-left-banner-home">Customer Ratings</h3>
+      <p class="middle-line-left-banner-home">* * * * *</p>
+    </div>
+  </div>
 </div>
+<div class="home-card-one">
+  <app-card
+    *ngFor="let el of data"
+    [title]="el.title"
+    [number]="el.number"
+    [value]="el.value"
+    [dynamicName]="el.colors"
+    [iconname]="el.iconname"
+  ></app-card>
 
-<app-graphcard></app-graphcard>
+  <app-graphcard></app-graphcard>
+</div>

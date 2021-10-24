@@ -14,6 +14,7 @@ import { CardComponent } from './reuse/card/card.component';
 import { HomeComponent } from './main/home/home.component';
 import { GraphcardComponent } from './reuse/graphcard/graphcard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthGuardService } from '../services/auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     HttpClientModule,
   ],
-  providers: [NocodeapiCrudService],
+  providers: [NocodeapiCrudService, AuthGuardService],
 })
 export class DashboardModule {}

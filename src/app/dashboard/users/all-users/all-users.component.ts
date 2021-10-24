@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
 import { NocodeapiCrudService } from '../../services/nocodeapi/nocodeapi-crud.service';
+import { Router } from '@angular/router';
 
 export interface UserData {
   userId: string;
@@ -71,7 +72,10 @@ export class AllUsersComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
   @ViewChild(MatSort) sort: MatSort | any;
 
-  constructor(private noCodeApiCrud: NocodeapiCrudService) {}
+  constructor(
+    private noCodeApiCrud: NocodeapiCrudService,
+    private router: Router
+  ) {}
   getAirtableData() {
     // this.noCodeApiCrud.getData().subscribe((data: any) => {
     //   this.dataSource = new MatTableDataSource(data);
@@ -96,7 +100,7 @@ export class AllUsersComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.noCodeApiCrud.getData().subscribe((data: any) => {
-      console.log(data);
+      // console.log(data);
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
@@ -111,11 +115,22 @@ export class AllUsersComponent implements OnInit, AfterViewInit {
         ...x,
         pic: this.profilePic[index].toString(),
       }));
-      console.log(this.dummmy);
-      console.log(this.dataSource);
-      console.log(this.profilePic);
+      // console.log(this.dummmy);
+      // console.log(this.dataSource);
+      // console.log(this.profilePic);
     });
-
-    console.log(this.dataSource);
+    this.noCodeApiCrud.dataget.subscribe((data) => console.log(data));
+    // console.log(this.dataSource);
+  }
+  deletedata(data: any) {
+    // console.log({ data });
+    this.noCodeApiCrud.deleteData(data.id).subscribe((data) => {
+      // console.log(data);
+    });
+  }
+  updateData(data: any) {
+    this.router.navigate(['/dashboard', 'edit', data.id]);
+    console.log(data);
+    this.noCodeApiCrud.dataget.next(data);
   }
 }

@@ -1,13 +1,18 @@
 <div class="chart-card-two">
-  <mat-card>
-    <mat-card-content>
-      <canvas id="myChart" #mychart></canvas>
-    </mat-card-content>
-  </mat-card>
+  <div class="graph1">
+    <mat-card class="card-style-graph">
+      <mat-card-content>
+        <canvas id="myChart" #mychart width="600" height="400"></canvas>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="gap"></div>
 
-  <mat-card>
-    <mat-card-content>
-      <canvas id="myChart2" #mychart2></canvas>
-    </mat-card-content>
-  </mat-card>
+  <div class="graph2">
+    <mat-card>
+      <mat-card-content>
+        <canvas id="myChart2" #mychart2 width="400" height="500"></canvas>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

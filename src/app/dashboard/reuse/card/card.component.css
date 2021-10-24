@@ -1,9 +1,16 @@
 .image-card-style {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+
+  object-fit: cover;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.432);
 }
 .example-card {
-  width: 300px;
+  min-width: 280px;
+  border-radius: 12px;
+  min-height: 90px;
+  /* padding: 10px 30px 30px 20px; */
 }
 .card-home {
   display: flex;
@@ -14,8 +21,40 @@
   margin-left: 10px;
 }
 .details-card-style {
-  margin-right: 10px;
+  margin: 10px 10px 0 10px;
+}
+.details-card-style h3 {
+  font-size: large;
+  font-weight: 500;
+  margin: 5px 0 0;
+}
+.details-card-style h4 {
+  font-size: large;
+  font-weight: 800;
+  text-align: right;
 }
 .blank-card-div {
   flex: 1;
+}
+.clsName {
+  background-color: hotpink;
+}
+.progress-bar-card {
+  height: 8px;
+}
+.purpleCard {
+  background-color: rgb(121, 15, 207);
+}
+.orangeCard {
+  background-color: rgb(255, 120, 30);
+}
+.greenCard {
+  background-color: rgb(13, 156, 32);
+}
+.blueCard {
+  background-color: rgb(20, 157, 220);
+}
+.card-div-icon {
+  margin: 13px 12px;
+  color: white;
 }

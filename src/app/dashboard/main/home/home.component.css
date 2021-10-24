@@ -1,15 +1,56 @@
 .home-card-one {
   display: flex;
-  justify-content: space-between;
+
+  margin: 5px;
   flex-wrap: wrap;
-  margin: 1vh 2vw;
 }
 app-card {
-  margin: 1vh 1vw;
+  margin: 1vh 1.3vw;
 }
 .chart-card-two {
   margin: 2vh 0 0 1vw;
   display: grid;
   grid-template-columns: 55vw;
   grid-auto-rows: 1000px;
+}
+.banner-home {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 15px;
+}
+.Right-banner-home {
+  align-self: center;
+}
+.right-home-text {
+  font-size: large;
+  font-weight: bold;
+  color: rgb(75, 73, 73);
+}
+.gap-banner-home {
+  flex: 1;
+}
+.left-banner-home {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.left-banner-home-1 {
+  margin: 0 7px;
+  padding: 3px;
+}
+.left-banner-home-2 {
+  margin: 0 7px;
+  padding: 3px;
+}
+.top-line-left-banner-home {
+  font-size: 11px;
+  margin: 1px;
+  color: gray;
+}
+.middle-line-left-banner-home {
+  font-size: 11px;
+  color: gray;
+  margin: 1px;
 }
