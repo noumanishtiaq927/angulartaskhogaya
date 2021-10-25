@@ -104,20 +104,6 @@ export class AllUsersComponent implements OnInit, AfterViewInit {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-      this.profilePic = data.map((x: any) =>
-        x.profilePic
-          ? x.profilePic.map((x: any) =>
-              x.thumbnails ? x.thumbnails.small.url : 'null'
-            )
-          : 'null'
-      );
-      this.dataSource.data = this.dataSource.data.map((x: any, index: any) => ({
-        ...x,
-        pic: this.profilePic[index].toString(),
-      }));
-      // console.log(this.dummmy);
-      // console.log(this.dataSource);
-      // console.log(this.profilePic);
     });
     this.noCodeApiCrud.dataget.subscribe((data) => console.log(data));
     // console.log(this.dataSource);

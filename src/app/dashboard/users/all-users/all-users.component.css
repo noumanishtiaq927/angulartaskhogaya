@@ -4,6 +4,61 @@
   width: 80vw;
   margin: 10vh auto;
 }
+.table-image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid grey;
+  display: block;
+  margin: auto;
+}
+td {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(43, 43, 43);
+  word-break: break-all;
+  line-break: strict;
+  margin: auto;
+}
+.w-75 {
+  max-width: 75px;
+}
+.w-20 {
+  max-width: 20%;
+}
+.w-15 {
+  max-width: 15%;
+}
+.w-40 {
+  max-width: 10%;
+}
+th {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(128, 128, 128);
+  margin: auto;
+  text-align: center;
+}
+
+mat-icon.table-action-icon:nth-child(1) {
+  background-color: rgb(151, 151, 151);
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  font-size: 19px;
+  display: inline-block;
+  color: white;
+}
+mat-icon.table-action-icon:nth-child(2) {
+  background-color: rgb(243, 135, 12);
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  font-size: 19px;
+  display: inline-block;
+  color: white;
+}
 
 .example-header {
   min-height: 64px;

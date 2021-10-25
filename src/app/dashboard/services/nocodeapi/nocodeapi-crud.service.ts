@@ -17,16 +17,24 @@ export class NocodeapiCrudService {
   getData(): Observable<any> {
     return this.http.get(this.url).pipe(
       map((data: any) => {
+        console.log(data);
         const datafields = data.records.map((data: any) =>
           data.fields ? data.fields : 'null'
         );
         const iddata = data.records.map((data: any) =>
           data.id ? data.id : 'null'
         );
+        const profilePic = datafields.map((x: any) =>
+          x.profilePic
+            ? x.profilePic.map((x: any) => (x.url ? x.url : 'null'))
+            : 'null'
+        );
         const datageet = datafields.map((x: any, index: any) => ({
           ...x,
           id: iddata[index],
+          pic: profilePic[index],
         }));
+        console.log(datageet);
         this.dataget.next(datageet);
         return datageet;
       }),
